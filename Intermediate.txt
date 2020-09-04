@@ -1,0 +1,42 @@
+START    0    0
+LDX    ZERO    0
+
+TD    INDEV1    3
+
+JEQ    RLOOP    6
+
+TD    INDEV2    9
+
+JEQ    R2LOOP    c
+
+RD    INDEV1    f
+
+STCH    VALUE    12
+
+WD    INDEV2    15
+
+TD    INDEV3    18
+
+JEQ    R3LOOP    1b
+
+RD    INDEV3    1e
+
+WD    INDEV1    21
+
+TIX    FIFTY    24
+
+JLT    RLOOP    27
+
+BYTE    X'F1'    2a
+
+BYTE    X'C0'    2b
+
+BYTE    X'03'    2c
+
+RESB    50    2d
+
+WORD    50    5f
+
+WORD    0    62
+
+END  0
